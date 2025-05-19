@@ -25,12 +25,8 @@ function createNewChart(data) {
                 const name = Object.keys(withoutTotal)[idx]
                 currentPath.push(name)
                 let view = staticData;
-                console.log(view)
-                console.log(currentPath)
                 for (const token of currentPath) {
-                    console.log(token)
                     view = view[token]
-                    console.log(view)
                 }
                 currentChart = createNewChart(view)
             }
@@ -40,9 +36,9 @@ function createNewChart(data) {
 
 export function goBack() {
     currentPath.pop()
-    let view = staticData;
+    let view= staticData;
     for (const token of currentPath) {
-        view = staticData[token];
+        view = view[token];
     }
     currentChart.destroy()
     currentChart = createNewChart(view)
