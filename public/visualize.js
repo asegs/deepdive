@@ -1,4 +1,4 @@
-import {Lansing} from "./examples/lansing_school.js";
+import {Lansing} from "../examples/lansing_school.js";
 
 const normalColors = ['yellow', 'blue', 'red', 'orange', 'purple', 'gold']
 
